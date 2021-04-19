@@ -1,0 +1,47 @@
+<div class="col-md-8">
+  <Posts @posts={{this.model}} @query={{this.query}} @onChange={{this.updateIt}} />
+</div>
+<div class="col-md-4">
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5>Ara</h5>
+    </div>
+    <div class="card-body">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Bir şeyler arayın" value={{this.query}} {{on "input" this.updateIt}}>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5>Kategoriler</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <ul class="list-unstyled">
+            <li>
+              <LinkTo @route="category" @model="php">PHP</LinkTo>
+            </li>
+            <li>
+              <LinkTo @route="category" @model="html">HTML</LinkTo>
+            </li>
+            <li>
+              <LinkTo @route="category" @model="ember">Ember</LinkTo>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="list-unstyled">
+            <li>
+              <LinkTo @route="category" @model="javascript">JavaScript</LinkTo>
+            </li>
+            <li>
+              <LinkTo @route="category" @model="swing">Swing</LinkTo>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{{#each @category as |post|}}
+<div class="card mb-4 w-100">
+  <div class="card-body">
+    <h4 class="card-title">{{post.title}}</h4>
+    <p class="card-text post-content" data-type="post" data-content={{post.content}}></p>
+    <LinkTo @route="post" @model={{post}} class="btn btn-primary">Daha Fazla</LinkTo>
+  </div>
+  <div class="card-footer d-flex text-muted">
+    <div class="sharer mr-auto">
+      <LinkTo @route="user" @model={{post.owner}} class="text-dark">{{post.owner}}</LinkTo> tarafından paylaşıldı
+    </div>
+  </div>
+</div>
+{{/each}}
+<script type="text/javascript">
+  $(function () {
+    $('[data-type="post"]').each(function (i) {
+      let element = $(this).attr("data-content");
+      $(this).removeAttr("data-content")
+      $(this).html(element);
+    })
+  });
+</script>

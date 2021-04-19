@@ -1,0 +1,112 @@
+.bg-black {
+    background-color: black;
+}
+
+.space {
+  padding-top: 4rem;
+}
+
+body {
+  height: 100%;
+}
+
+.card-text {
+  padding-top: 1rem;
+}
+
+.contact {
+  color: black;
+}
+
+.contact:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.contact-name:hover {
+  text-decoration: underline;
+}
+
+.active {
+  border-bottom: 2px solid blue;
+}
+
+.skill {
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.skill:hover {
+  transform: scale(1.3);
+  background-color: black;
+  color: white;
+}
+
+body::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    background-color: black;
+}
+
+body::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+* {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+code {
+  -webkit-touch-callout:initial;
+   -webkit-user-select:text;
+   -moz-user-select:text;
+   -ms-user-select:initial;
+   user-select:text;
+}
+
+body {
+  padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 576px) {
+  .active {
+    border-bottom: 0;
+  }
+  .col-2 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.error-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.error-actions {
+  margin-top:15px;
+  margin-bottom:15px;
+}
+.error-actions .btn {
+  margin-right:10px;
+}
+
+.post-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

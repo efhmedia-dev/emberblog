@@ -1,0 +1,9 @@
+<div class="row justify-content-center">
+  {{#each this.myskills as |skill|}}
+  <div class="col-2 rounded border border-dark p-2 mb-2 mr-2 skill">
+    <i class="fab fa-{{skill.icon}} fa-2x"></i>
+    <br>
+    {{skill.name}}
+  </div>
+  {{/each}}
+</div>
